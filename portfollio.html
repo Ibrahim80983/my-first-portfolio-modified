@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+                                                                                                                                             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="./portfolio2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navigation">
+        <div class="header"><h1>PIA</h1></div>
+        <div class="menu">
+            <ul class="list">
+                <li id="see"><a href="#about"><p>ABOUT</p></a></li>
+                <li id="what"><a href="#what-i-do">WHAT I DO</a></li>
+                <li id="works"><a href="#work">WORKS</a></li>
+                <li id="blog"><a href="#blogs">BLOG</a></li>
+                <li id="contacts"><a href="#contact"> CONTACTS</a></li>
+                <li><button id="popOut">OUT</button></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div id="logOut">
+    <form onsubmit="validateLogout(); return false;">
+        <h1>LOG OUT</h1>
+        <span id="close">&times;</span>
+        <input type="password" name="password" id="password" placeholder="enter password"><br><br>
+        <input type="submit" id="submit" value="submit">
+    </form>
+    </div>
+    <script>
+        var font = document.getElementById('popOut');
+        var form = document.getElementById('logOut');
+        var span = document.getElementById('close');
+        font.onclick = function() {
+            form.style.display = "flex";
+            form.style.backgroundColor = 'rgba( 0, 0, 0, 0.2)';
+        span.onclick = function(){
+           form.style.display = 'none';
+        }
+;
+        }
+        function validateLogout() {
+            var pass= document.getElementById('password').value;
+            var login = 'developer';
+            if(pass == login) {
+                window.location.href = "link-to-project.html";
+            }
+            else if(pass == "") {
+                alert('password required');
+            }
+            else{
+                alert("invalid password")
+            }
+            
+        };
+    </script>
+    <div class="desc">
+        <div class="social">
+            <h1 id="typed"></h1>
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-google-plus"></i>
+        </div>
+        <!-- <div class="">
+            <span id="typed"></span>
+        </div> -->
+        <script>
+            var ty = new Typed("#typed", {
+                backDelay: 1000,
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true,
+                strings: ["My name is Ibrahim", "A developer"],
+            });
+        </script>
+
+        
+
+    </div>
+    <div id="about" class="about">
+        <div class="myImage"><img src="./myPics.jpg" alt="myPics"></div>
+        <div class="myDesc">
+            <h1>I'm Ayanwumi Ibrahim,<br> Web Designer & Web Developer<br> from Osun State, Nigeria</h1><br>
+            <p>I have rich experience in website design & building and customization.
+                 I'm good at html, css, javascript, wordpress, php, jquery, bootstrap. I love to 
+                 talk to you about our unique approach. Feel free to contact me writing an email with your project idea.</p><br>
+                 <a href="./Resume.docx">DOWNLOAD RESUME</a>
+        </div>
+    </div>
+    <div id="what-i-do" class="what-i-do">
+        <h1>What I Do</h1>
+        <div class="flex-container">
+            <div>
+                <i class="fa-regular fa-copy"></i><br><br>
+                <h5>UI/UX DESIGN</h5><br>
+                <p>As a passionate UI/UX designer with over 5 years of experience, 
+                    I specialize in creating intuitive and visually appealing interfaces.
+                     My goal is to enhance user satisfaction by improving the usability,
+                      accessibility,
+                     and pleasure provided in the interaction with digital products.</p>
+            </div>
+            <div>
+                <i class="fa-regular fa-lightbulb"></i><br><br>
+                <h5>BRANDING IDENTITY</h5><br>
+                <p>With a keen eye for aesthetics and a strategic mindset, I 
+                    specialize in creating distinctive and memorable brand identities.
+                     My experience spans over 5 years, working with diverse clients to 
+                     develop visual identities that resonate 
+                    with their target audiences and stand out in the market.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-ruler"></i><br><br>
+                <h5>WEB DESIGN</h5><br>
+                <p>As a dedicated web designer with over 5 years of experience,
+                     I specialize in creating engaging and user-friendly websites.
+                      My expertise spans a variety of industries, and I am passionate about
+                       transforming
+                     ideas into visually appealing and functional digital experiences.</p>
+            </div>
+            <div class="services">
+                <i class="fa-brands fa-android"></i><br><br>
+                <h5>MOBILE APPS</h5><br>
+                <p>As a skilled mobile app designer with over 5 years of experience,
+                     I specialize in creating intuitive and engaging user experiences
+                      for both iOS and Android platforms. My work focuses on combining 
+                      functionality
+                     with visually appealing designs to deliver seamless mobile interactions.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-line"></i><br><br>
+                <h5>ANALYTICS</h5><br>
+                <p>As a UI/UX designer, I believe that data-driven decisions are crucial 
+                    for creating effective and user-centered designs. My experience with
+                    analytics involves using various tools to track user behavior, gather 
+                    insights,
+                     and optimize designs for better performance and user satisfaction.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-camera"></i><br><br>
+                <h5>PHOTOGRAPHY</h5><br>
+                <p>With a keen eye for detail and a passion for capturing moments, I have 
+                    over 5 years of experience in professional photography. My expertise
+                     spans various genres, including portrait, landscape, product, and
+                      event photography. I aim to 
+                    create visually compelling images that tell a story and evoke emotion.</p>
+            </div>
+        </div>
+    </div>
+    <div class="work" id="work">
+        <div class="work-menu-list">
+            <h1>Recent Works</h1>
+            <ul>
+                <li><a href="">All</a></li>
+                <li><a href="">Branding</a></li>
+                <li><a href="">Mockup</a></li>
+                <li><a href="">UI Kits</a></li>
+                <li><a href="">Photography</a></li>
+            </ul>
+        </div>
+    <div class="work-img">
+        <div class="img1"><img src="./car1.jpg" alt="car"></div>
+        <div class="img2"><img src="./car aero2.jpg"></div>
+        <div class="img3"><img src="./tortoise3.jpg"></div>
+        <div class="img4"><img src="./ferrari4.jpg"></div>
+        <div class="img5"><img src="./Lambo5.jpg"></div>
+        <div class="img6"><img src="./lambo6.jpg"></div>
+    </div>
+    </div>
+    <div id="blogs" class="blogs">
+        <h1>Latest Blogs</h1>
+        <div class="latest-blogs">
+            <div class="esc">
+                <img src="./Lambo5.jpg" alt="lambo">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Et culpa iusto, beatae perferendis eos</div>
+
+            </div>
+            <div class="esc">
+                <img src="./lambo6.jpg" alt="lambo">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid consectetur
+                     quidem, doloribus similique laudanti corrupti!</div>
+            </div>
+            <div class="esc">
+                <img src="./car1.jpg" alt="">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quos molestiae natus tenetur similique nesciunt o</div>
+        </div>
+    </div>
+    <!-- <a href="">VIEW BLOG</a> -->
+
+    <div class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-me">
+            <form>
+                <input type="text" name="" id="text" placeholder="Name*">
+                <input type="tel" name="phone" placeholder="Phone*">
+                <input type="email" name="email" placeholder="Email*">
+                <input type="text" name="search" placeholder="search*">
+                <textarea placeholder="message"></textarea>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-google-plus"></i>
+            <p>&copy; 2024 PIA. all right reserved</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
